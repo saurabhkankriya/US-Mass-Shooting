@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "x <- c(\"apple\", \"banana\", \"pear\")\nstr_view(x, \".a.\")\ndot <- \"\\\\.\"\nwriteLines(dot)\nstr_view(c(\"abc\", \"a.c\", \"bef\"), \"a\\\\.c\")\n\n# To create the regular expression, we need \\\\\ndot <- \"\\\\.\"\n\n# But the expression itself only contains one:\nwriteLines(dot)\n#> \\.\n\n# And this tells R to look for an explicit .\nstr_view(c(\"abc\", \"a.c\", \"bef\"), \"a\\\\.c\")\n\nx <- \"a\\\"'\\\\b\"\nx\nwriteLines(x)\n\nstr_view(x, pattern = '\\\"\\'\\\\\\\\')\nu = \"fmeaoi.a.b.c\"\nwriteLines(u)\nstr_view(u, \"\\\\..\\\\..\\\\..\")\n\n\nx <- c(\"app$^$le\", \"banana\",\"alphamala\")\nstr_view(x, \"\\\\$\\\\^\\\\$\")\n\n\ndata(\"words\")\n str_view(words, \"^[aeiou]\", match=T)\n str_view(words, \"^ed$|[^e]ed$\", match=T)\n str_view(words, \"q[^u]\", match= T)\n mobile <- '+91-9021566239'^[789]\\d{9}$\n str_view(mobile, \"\\\\d\\\\d\\\\d\\\\d\\\\d\\\\d\\\\d\\\\d\")\n date_test= \"adad2017-07-10fa\"\n str_view(date_test, \"\\\\d{4}-\\\\d{2}-\\\\d{2}\")\n \n x <- \"1888 is the longest year in Roman numerals: MDCCCLXXXVIII\"\n str_view(x, \"CC+\")\n x <- \"\\\\\\\\\\\\\\\\\"\n str_view(words, \"[aeiou]{3,}\", match=T)\n \n fruits <- c(\"bannnana\", \"coconut\", \"cucumber\", \"jujube\")\n str_view(fruits, \"(.)(.)\\\\2\\\\2\")\n \n \"(..).*\\\\1\"\n str_view(words, \"(.).*\\\\2.*\", match=T)\n \n x <- c(\"apple\", \"banana\", \"pear\")\n sum(str_detect(x, \"e\"))\n \n sum(str_detect(words, \"^t\"))\n \n words[str_detect(words, \"x$\")]\n str_view(words, \"x$\", match = T)\n \n View(word_dir %>% mutate(vowels = str_count(words, \"[aeiou]\"),\n                     consonents = str_count(words, \"[^aeiou]\")))\n \n \n str_view(words, \"^x|x$\", match = T)\n words[str_detect(words, \"^x|x$\")]\n \n data(sentences)\n colours <- c(\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\")\n colours_match <- str_c(colours, collapse = \"|\")\n colours_match\n \n has_color <- str_subset(sentences, colours_match)\n head(has_color)\n matched <- str_extract(has_color, colours_match)\n more <- sentences[str_count(sentences, colours_match) > 1]\nmore\nstr_view_all(more, colours_match)\nstr_extract_all(more, colours_match, simplify = T)\n\nstr_view(sentences, \"\\\\w+\")\nfirst_word <- str_extract(sentences, \"\\\\w+\")\nView(first_word)\n ",
+    "created" : 1509082293592.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2823311698",
+    "id" : "5D8447DB",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1509692127005,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

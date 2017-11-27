@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1509689854955.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "403D8AB4",
+    "lastKnownWriteTime" : 7665811726724392287,
+    "last_content_update" : 1509689854955,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "7E3676ED",
+        "caption" : "word_dir %>% mutate(vowels = str_count(words, \"[aeiou]\"), consonents = str_count(words, ",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=&cache_key=7E3676ED",
+        "displayedObservations" : 980,
+        "environment" : "_rs_no_env",
+        "object" : "",
+        "preview" : 0,
+        "totalObservations" : 980,
+        "variables" : 4
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

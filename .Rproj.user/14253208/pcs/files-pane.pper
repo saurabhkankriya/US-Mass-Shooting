@@ -1,0 +1,9 @@
+{
+    "path" : "D:/Learning/Data Science/Kaggle/US Mass Shootings",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
